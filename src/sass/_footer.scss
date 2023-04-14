@@ -1,4 +1,14 @@
-.container {
+.footer-background {
+  background-color: #fff5f6;
+}
+.footer-section {
+  position: relative;
+  max-width: 320px;
+  height: 1540px;
+  background-color: #fff5f6;
+  margin: 0 auto;
+}
+.footer-container {
   margin: 0 auto;
   width: 320px;
 }
@@ -19,6 +29,7 @@
     padding-left: 32px;
     padding-right: 32px;
     width: 280px;
+    height: 412px;
     background-color: white;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
@@ -30,11 +41,14 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   &__inner-section {
+    bottom: 539px;
+    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   &__title {
@@ -47,8 +61,8 @@
     border-radius: 6px;
     background-color: $brown-color;
     margin-top: 40px;
-    width: 75.1px;
-    height: 28px;
+    width: 80px;
+    height: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +71,7 @@
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: $font-weight-500;
-    font-size: $font-size-14;
+    font-size: 12px;
     letter-spacing: 0.04em;
     color: $black-color;
     padding-top: 20px;
@@ -68,8 +82,8 @@
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: $font-weight-500;
-    font-size: $font-size-16;
-    line-height: 183%;
+    font-size: 12px;
+    line-height: 18px;
     letter-spacing: 0.04em;
     color: $gray-color;
     border-bottom: 1px solid #e1e1e1;
@@ -90,8 +104,7 @@
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: $font-weight-500;
-    font-size: $font-size-16;
-    line-height: 186%;
+    font-size: 12px;
     letter-spacing: 0.04em;
     color: $black-color;
     padding-top: 24px;
@@ -103,8 +116,7 @@
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: $font-weight-500;
-    font-size: $font-size-16;
-    line-height: 186%;
+    font-size: 12px;
     color: $secondary-color;
   }
 }
@@ -117,8 +129,7 @@
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: $font-weight-500;
-    font-size: $font-size-16;
-    line-height: 183%;
+    font-size: 12px;
     color: $gray-color;
     text-decoration: none;
   }
@@ -131,8 +142,7 @@
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: $font-weight-500;
-    font-size: $font-size-16;
-    line-height: 183%;
+    font-size: 12px;
     color: $gray-color;
     text-decoration: none;
   }
@@ -147,6 +157,11 @@
 .footer {
   background-color: $secondary-background-color;
   padding-right: 16px;
+  justify-content: center;
+  bottom: 0px;
+  width: 100%;
+  position: absolute;
+  display: flex;
 }
 .buttons {
   display: flex;
@@ -158,7 +173,6 @@
     font-style: normal;
     font-weight: $font-weight-700;
     font-size: $font-size-16;
-    line-height: 21px;
     color: $white-color;
     width: 161.45px;
     height: 44px;
@@ -189,8 +203,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    margin-top: 32px;
+    gap: 10px;
   }
 }
 
@@ -248,7 +261,7 @@
   display: flex;
   flex-direction: column;
   margin-right: 19.53px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .svg-footer {
@@ -566,7 +579,11 @@
 /*Media-768*/
 
 @media screen and (min-width: 768px) {
-  .container {
+  .footer-section {
+    height: 635px;
+    max-width: 768px;
+  }
+  .footer-container {
     width: 768px;
   }
   .contacts {
@@ -574,14 +591,18 @@
       flex-direction: row;
       justify-content: center;
       gap: 32px;
+      bottom: 402px;
+      width: 100%;
     }
     &__inner {
       width: 224px;
+      height: 528px;
       padding-left: 32px;
       padding-right: 33px;
     }
     &__title {
       font-size: $font-size-16;
+      height: 28px;
     }
     &__subtitle {
       padding-top: 32px;
@@ -591,6 +612,7 @@
     &__text {
       padding-bottom: 32px;
       font-size: $font-size-14;
+      line-height: 186%;
     }
   }
   .time-schedule {
@@ -600,18 +622,21 @@
     &__days {
       padding-top: 32px;
       font-size: $font-size-14;
+      line-height: 186%;
     }
     &__hours {
       font-size: $font-size-14;
     }
     &--days2 {
       padding-top: 12px;
+      line-height: 186%;
     }
   }
 
   .contacts-list {
-    padding-top: 12px;
+    padding-top: 32px;
     font-size: $font-size-14;
+    line-height: 183%;
   }
   .buttons {
     flex-direction: row;
@@ -620,7 +645,7 @@
     &__list {
       display: flex;
       flex-direction: row;
-      margin-top: 60px;
+      gap: 8px;
     }
     &__items {
       width: 191.45px;
@@ -650,8 +675,8 @@
     }
   }
   .svg-section {
-    justify-content: flex-end;
-    margin-left: 110px;
+    margin: auto;
+    margin-right: 20px;
   }
   .svg-footer {
     padding-bottom: 47px;
@@ -736,13 +761,19 @@
 }
 /*Media-1280*/
 @media screen and (min-width: 1280px) {
-  .container {
+  .footer-section {
+    height: 877px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .footer-container {
     width: 1280px;
+    bottom: 438px;
   }
   .contacts {
     &__inner {
-      width: 528px;
-      height: 581px;
+      width: 368px;
+      height: 538px;
       padding-left: 40px;
       padding-right: 40px;
     }
@@ -771,9 +802,6 @@
   .buttons {
     gap: 12px;
 
-    &__list {
-      margin-top: 61px;
-    }
     &__items {
       width: 198px;
       gap: 13.62px;
@@ -787,7 +815,7 @@
     &__itmes {
       font-size: $font-size-30;
       line-height: 34px;
-      width: 472px;
+      width: 478px;
       height: 34px;
     }
     &__list {
@@ -796,7 +824,7 @@
       padding-left: 16px;
     }
     &--second {
-      width: 474px;
+      width: 478px;
       height: 66px;
       font-size: $font-size-58;
       line-height: 66px;

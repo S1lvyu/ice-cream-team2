@@ -39,6 +39,9 @@ img {
     display: flex;
     gap: 1.89px;
     flex-direction: column;
+    &--modifier {
+      margin-top: 32.93px;
+    }
   }
   &__picture {
     border-radius: $font-size-20;
