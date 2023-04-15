@@ -5,16 +5,11 @@
   position: relative;
   max-width: 320px;
   height: 1540px;
-  background-color: #fff5f6;
   margin: 0 auto;
 }
 .footer-container {
   margin: 0 auto;
   width: 320px;
-}
-
-.unstyled-list {
-  list-style: none;
 }
 
 /*Contacts*/
@@ -33,13 +28,14 @@
     background-color: white;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+    &:hover {
+      border: 3px dotted $primary-color;
+      box-shadow: 0 8px 30px rgba(144, 35, 62, 0.632);
+      cursor: pointer;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
-  &__inner:hover {
-    border: 3px dotted $primary-color;
-    box-shadow: 0 8px 30px rgba(144, 35, 62, 0.632);
-    cursor: pointer;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+
   &__inner-section {
     bottom: 539px;
     position: absolute;
@@ -52,8 +48,6 @@
   }
 
   &__title {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: $font-weight-500;
     font-size: 12px;
     letter-spacing: 0.04em;
@@ -68,8 +62,6 @@
     align-items: center;
   }
   &__subtitle {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: $font-weight-500;
     font-size: 12px;
     letter-spacing: 0.04em;
@@ -79,8 +71,6 @@
   }
 
   &__text {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: $font-weight-500;
     font-size: 12px;
     line-height: 18px;
@@ -101,8 +91,6 @@
   padding-bottom: 24px;
 
   &__days {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: $font-weight-500;
     font-size: 12px;
     letter-spacing: 0.04em;
@@ -113,8 +101,6 @@
     padding-top: 8px;
   }
   &__hours {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: $font-weight-500;
     font-size: 12px;
     color: $secondary-color;
@@ -126,36 +112,32 @@
   padding-bottom: 40px;
 
   &__tel {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: $font-weight-500;
     font-size: 12px;
     color: $gray-color;
-    text-decoration: none;
+    &:hover {
+      color: $primary-color;
+      cursor: pointer;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
-  &__tel:hover {
-    color: $primary-color;
-    cursor: pointer;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+
   &__mail {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: $font-weight-500;
     font-size: 12px;
     color: $gray-color;
-    text-decoration: none;
-  }
-  &__mail:hover {
-    color: $primary-color;
-    cursor: pointer;
+    &:hover {
+      color: $primary-color;
+      cursor: pointer;
+    }
   }
 }
 
 /*Footer*/
 
 .footer {
-  background-color: $secondary-background-color;
   padding-right: 16px;
   justify-content: center;
   bottom: 0px;
@@ -169,28 +151,15 @@
   gap: 10px;
 
   &__items {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: $font-weight-700;
     font-size: $font-size-16;
-    color: $white-color;
     width: 161.45px;
     height: 44px;
-    background-color: $primary-color;
     border-radius: 22px;
-    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-    &:hover {
-      transform: scale(1.1);
-      cursor: pointer;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 1000ms;
-    }
   }
 
   &--second {
@@ -213,7 +182,7 @@
 
   &__itmes {
     font-family: 'Titan One';
-    font-style: normal;
+
     font-weight: $font-weight-400;
     font-size: 18px;
     line-height: 21px;
@@ -241,8 +210,6 @@
   }
 }
 .footer-contact {
-  font-family: 'DM Sans';
-  font-style: normal;
   font-weight: $font-weight-700;
   font-size: 12px;
   line-height: 186%;
@@ -254,7 +221,6 @@
 
   &__tel {
     color: $primary-color;
-    text-decoration: none;
   }
 }
 .svg-section {
@@ -296,8 +262,6 @@
   padding-top: 16px;
 
   &__text {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: $font-weight-700;
     font-size: $font-size-14;
     line-height: 152%;
@@ -327,7 +291,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 3040px;
+  top: 5500px;
 
   &__button {
     display: flex;
@@ -368,7 +332,7 @@
 .modal-footer-1__inner {
   width: 300px;
   height: 500px;
-  background: #ffffff;
+  background: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -396,14 +360,11 @@
     padding-left: 42px;
     outline: none;
     cursor: pointer;
-    &:focus {
-      border: 1px solid $secondary-color;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      color: $primary-color;
-    }
+    &:focus,
     &:hover {
       border: 1px solid $secondary-color;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      color: $primary-color;
     }
   }
   &__items {
@@ -427,20 +388,17 @@
     letter-spacing: 0.01em;
     outline: none;
     cursor: pointer;
-    &:focus {
-      border: 1px solid $secondary-color;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    &:focus,
     &:hover {
       border: 1px solid $secondary-color;
-      color: $primary-color;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      color: $primary-color;
     }
   }
 }
 .button-footer {
   background: $white-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   border-radius: 22px;
   border: 2px solid $secondary-color;
   letter-spacing: 0.06em;
@@ -454,16 +412,16 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
-  cursor: pointer;
   padding: 0;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   &:hover {
     background-color: $secondary-color;
     color: $white-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
     transform: scale(1.25);
     animation-duration: 3s;
     border: none;
+    cursor: pointer;
   }
 }
 
@@ -482,7 +440,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 3240px;
+  top: 5500px;
 
   &__inner {
     width: 300px;
@@ -520,7 +478,6 @@
   }
   &__title {
     font-family: 'Titan One';
-    font-style: normal;
     font-weight: $font-weight-400;
     font-size: 14px;
     line-height: 21px;
@@ -532,8 +489,6 @@
   }
 
   &__adress {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: $font-weight-500;
     font-size: $font-size-14;
     letter-spacing: 0.04em;
@@ -561,9 +516,7 @@
 
   &__btn-text {
     color: $primary-color;
-    text-decoration: none;
-    font-family: 'DM Sans';
-    font-style: normal;
+
     font-weight: $font-weight-400;
     font-size: $font-size-16;
   }
@@ -592,7 +545,6 @@
       justify-content: center;
       gap: 32px;
       bottom: 402px;
-      width: 100%;
     }
     &__inner {
       width: 224px;
@@ -702,6 +654,7 @@
     }
   }
   .modal-footer-1 {
+    top: 2700px;
     &__inner {
       width: 450px;
       height: 609px;
@@ -731,6 +684,7 @@
     margin-top: 10px;
   }
   .modal-2 {
+    top: 2700px;
     &__inner {
       width: 450px;
       height: 609px;
@@ -764,7 +718,6 @@
   .footer-section {
     height: 877px;
     max-width: 1280px;
-    margin: 0 auto;
   }
   .footer-container {
     width: 1280px;
@@ -846,6 +799,7 @@
     padding-top: 7px;
   }
   .modal-footer-1 {
+    top: 3620px;
     &__button {
       left: 475px;
     }
@@ -867,6 +821,7 @@
     margin-top: 0;
   }
   .modal-2 {
+    top: 3620px;
     &__inner {
       width: 528px;
       height: 581px;
