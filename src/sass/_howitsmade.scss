@@ -1,20 +1,6 @@
-p,
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-
 #how-button__text {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 162%;
-  width: 220px;
   color: $gray-color;
   display: none;
-  margin-left: 20px;
 }
 
 .made {
@@ -23,7 +9,6 @@ h3 {
   text-align: center;
   margin: 0px auto;
   position: relative;
-
   height: 1564px;
   background-color: $secondary-background-color;
   height: 1564px;
@@ -33,7 +18,6 @@ h3 {
     font-size: 18px;
     line-height: 21px;
     color: $secondary-color;
-    margin: 0px;
     padding-top: 60px;
     padding-bottom: 15px;
     text-transform: uppercase;
@@ -68,6 +52,26 @@ h3 {
     display: flex;
     position: relative;
     flex-direction: column;
+    width: 220px;
+    font-size: 12px;
+    line-height: 162%;
+    font-weight: 500;
+    margin-left: 20px;
+    &--text1 {
+      color: $black-color;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    &--text2 {
+      font-size: 14px;
+      line-height: 194%;
+      color: $gray-color;
+      margin-bottom: 15px;
+    }
+    &--text3 {
+      color: $gray-color;
+      margin-bottom: 20px;
+    }
   }
 
   &__button {
@@ -75,14 +79,14 @@ h3 {
     height: 44px;
     background: $white-color;
     border-radius: 22px;
-    border-color: $white-color;
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
-    align-items: center;
-    text-align: center;
     color: $primary-color;
     margin-left: 20px;
+    &:hover {
+      background-color: #ecebeb;
+    }
   }
 
   &__background-container {
@@ -96,47 +100,8 @@ h3 {
   }
 }
 
-.made-section__text--text1 {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 162%;
-  color: $black-color;
-  padding-top: 40px;
-  width: 220px;
-  padding-bottom: 40px;
-  margin-left: 20px;
-}
-
-.made-section__text--text2 {
-  font-size: 14px;
-  line-height: 194%;
-  color: $gray-color;
-  width: 220px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 162%;
-  margin-bottom: 15px;
-  margin-left: 20px;
-}
-
-.made-section__text--text3 {
-  font-size: 14px;
-  line-height: 194%;
-  color: $gray-color;
-  width: 220px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 162%;
-  margin-bottom: 20px;
-  margin-left: 20px;
-}
-
-// .container {
-//   width: 320px;
-//   margin: 0px auto;
-// }
 .how-its-made-container {
-  width: 320px;
+  max-width: 320px;
   margin: 0px auto;
   background-color: $secondary-background-color;
 }
@@ -145,10 +110,6 @@ h3 {
   &__list {
     display: flex;
     flex-direction: column;
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    padding-bottom: 209px;
     gap: 32px;
     margin-left: 20px;
   }
@@ -188,9 +149,7 @@ h3 {
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .how-its-made-container {
-    width: 768px;
-    margin: 0px auto;
-    background-color: $secondary-background-color;
+    max-width: 768px;
   }
 
   .made {
@@ -202,13 +161,10 @@ h3 {
     &__title {
       font-size: 48px;
       line-height: 55px;
-      letter-spacing: 0.04em;
     }
   }
 
   .made-section {
-    background: none;
-    background-color: $secondary-background-color;
     display: flex;
     gap: 32px;
 
@@ -225,24 +181,16 @@ h3 {
       align-self: center;
       margin-left: 32px;
     }
-  }
-
-  .made-section__text--text1,
-  .made-section__text--text2,
-  .made-section__text--text3 {
-    font-size: 14px;
-    line-height: 176%;
-    width: 334px;
-    margin-left: 0px;
+    &__text {
+      font-size: 14px;
+      line-height: 176%;
+      width: 334px;
+      margin-left: 0px;
+    }
   }
 
   #how-button__text {
-    display: none;
-    width: 334px;
-    font-size: 14px;
     line-height: 176%;
-    letter-spacing: 0.04em;
-    margin-left: 0px;
   }
 
   .quantity {
@@ -263,8 +211,6 @@ h3 {
     }
 
     &__list {
-      margin: 0px;
-      padding: 0px;
       display: flex;
       flex-direction: row;
       gap: 4px;
@@ -279,9 +225,7 @@ h3 {
 
 @media screen and (min-width: 1280px) {
   .how-its-made-container {
-    width: 1200px;
-    margin: 0px auto;
-    background-color: $secondary-background-color;
+    max-width: 1200px;
   }
 
   .made {
@@ -314,12 +258,21 @@ h3 {
       margin-left: 16px;
     }
 
-    &__text--text1 {
-      font-size: 16px;
-      line-height: 176%;
+    &__text {
+      font-size: 14px;
+      line-height: 194%;
       width: 463px;
-      padding-top: 90px;
       margin-left: 0px;
+      &--text1 {
+        font-size: 16px;
+        line-height: 176%;
+        width: 463px;
+        padding-top: 90px;
+        margin-left: 0px;
+      }
+      &--text3 {
+        margin-bottom: 40px;
+      }
     }
 
     &__button {
@@ -327,26 +280,6 @@ h3 {
       line-height: 21px;
       margin-left: 0px;
     }
-  }
-
-  .made-section__text--text2,
-  .made-section__text--text3 {
-    font-size: 14px;
-    line-height: 194%;
-    width: 463px;
-    margin-left: 0px;
-  }
-
-  .made-section__text--text3 {
-    margin-bottom: 40px;
-  }
-
-  #how-button__text {
-    display: none;
-    width: 463px;
-    font-size: 14px;
-    line-height: 194%;
-    margin-left: 0px;
   }
 
   .quantity {
